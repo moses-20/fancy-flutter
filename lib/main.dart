@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'screens/list_view.dart';
-import 'pages/flu_tabs.dart';
+import 'routes/flu_tabs.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: '/flutabs',
+    theme: ThemeData(primarySwatch: Colors.teal),
+    initialRoute: '/',
     routes: {
-      '/': (context) => _Home(),
-      '/flutabs': (context) => Flutabs(),
+      '/': (context) => Flutabs(),
+      '/home': (context) => _Home(),
     },
   ));
 }
