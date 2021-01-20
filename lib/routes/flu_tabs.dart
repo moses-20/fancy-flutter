@@ -24,21 +24,25 @@ class _FlutabsState extends State<Flutabs> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    var tabBar = TabBar(
+      controller: controller,
+      tabs: <Widget>[
+        Tab(
+          icon: Icon(Icons.airport_shuttle),
+        ),
+        Tab(
+          icon: Icon(Icons.bike_scooter),
+        ),
+      ],
+    );
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter Tabs'),
         backgroundColor: Colors.teal,
-        bottom: TabBar(
-          controller: controller,
-          tabs: <Widget>[
-            Tab(
-              icon: Icon(Icons.airport_shuttle),
-            ),
-            Tab(
-              icon: Icon(Icons.bike_scooter),
-            ),
-          ],
-        ),
+      ),
+      bottomNavigationBar: Material(
+        color: Colors.teal,
+        child: tabBar,
       ),
       body: TabBarView(
         controller: controller,
