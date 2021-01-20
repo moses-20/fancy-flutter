@@ -39,10 +39,7 @@ class _FlutabsState extends State<Flutabs> with SingleTickerProviderStateMixin {
       appBar: AppBar(
         title: Text('Flutter Tabs'),
         backgroundColor: Colors.teal,
-      ),
-      bottomNavigationBar: Material(
-        color: Colors.teal,
-        child: tabBar,
+        bottom: tabBar,
       ),
       body: TabBarView(
         controller: controller,
